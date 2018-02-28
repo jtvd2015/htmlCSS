@@ -1,0 +1,49 @@
+<!doctype html> 
+<html lang="en">
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script lang="javascript">
+	$().ready(function() {
+		$("#inp,#inp2").val("Hello, Jennifer!");
+		
+		$("button").click(function() {
+			$("#inp").val("The first input box");
+			$("#inp2").val("The second input box");
+			//alert("We clicked the button.");
+		});
+
+		$("label").css("font-family", "Arial");
+
+		$("#toggle").click(function() {
+		$("#inp, #inp2").toggle();		
+		});
+
+		$("#login").click(function() {
+			var username = $("username").val();
+			var password = $("password").val();
+			$("#inp").val(username);
+			$("#inp2").val(password);
+		});
+
+	});
+</script>
+</head>
+<body>
+	<input id="inp" type="text"> 
+	<br>
+	 <input id="inp2" type="text">
+	<p></p>
+	<button>Click me!</button>
+	<label>This is a label.</label>
+	<button id="toggle">Toggle Input boxes</button>
+	<form>
+		<p><label>User Name</label><input id="username" type="text"></p>
+		<p><label>Password</label><input id="password" type="password"></p>
+		<button id="login" type="button">Login</button>
+	</form>
+
+</body>
+</html>
+
+
